@@ -31,6 +31,7 @@ class TennisGame3:
             return "Advantage " + leader
         return "Win for " + leader
 
+
 # POPRAWKI:
 # 1 Zamieniono operatory trzyargumentowe na bloki if.
 # 2 Zmieniono nazwy zmiennych p1, p2 na bardziej czytelne.

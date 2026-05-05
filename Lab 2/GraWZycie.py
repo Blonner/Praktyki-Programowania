@@ -17,13 +17,14 @@ def tworzenie_siatki():
 
 
 def wyswietl(siatka):
-    os.system('cls' if os.name == 'nt' else 'clear')
+    os.system("cls" if os.name == "nt" else "clear")
     for i in range(RZEDY):
         for j in range(KOLUMNY):
             komorka = siatka[i][j]
-            print('X' if komorka == 1 else '.', end="")  #
+            print("X" if komorka == 1 else ".", end="")  #
         print()
     print("============================")
+
 
 def sasiedzi(siatka, r, k):
     licznik = 0
@@ -67,5 +68,5 @@ def main():
         time.sleep(1)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

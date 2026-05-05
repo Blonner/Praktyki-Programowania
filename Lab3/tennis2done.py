@@ -23,14 +23,18 @@ class TennisGame2:
         # 3 wygrana/przewaga
         if self.p1_points >= 4 or self.p2_points >= 4:
             diff = self.p1_points - self.p2_points
-            if diff == 1: return "Advantage " + self.p1_name
-            if diff == -1: return "Advantage " + self.p2_name
-            if diff >= 2: return "Win for " + self.p1_name
+            if diff == 1:
+                return "Advantage " + self.p1_name
+            if diff == -1:
+                return "Advantage " + self.p2_name
+            if diff >= 2:
+                return "Win for " + self.p1_name
             return "Win for " + self.p2_name
 
         # 4 wyniki
         res = ["Love", "Fifteen", "Thirty", "Forty"]
         return res[self.p1_points] + "-" + res[self.p2_points]
+
 
 # POPRAWKI:
 # 1 Polaczono warunki if sprawdzajace kazdy punkt z osobna.

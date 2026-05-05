@@ -66,7 +66,7 @@ class TestTennis(unittest.TestCase):
             TennisGame6,
         ):
             for testcase in test_cases:
-                (p1_points, p2_points, score, p1_name, p2_name) = testcase
+                p1_points, p2_points, score, p1_name, p2_name = testcase
                 game = play_game(
                     TennisGameClass, p1_points, p2_points, p1_name, p2_name
                 )
@@ -75,7 +75,7 @@ class TestTennis(unittest.TestCase):
 
     def test_score_game7(self):
         for testcase in test_cases:
-            (p1_points, p2_points, score, p1_name, p2_name) = testcase
+            p1_points, p2_points, score, p1_name, p2_name = testcase
             game = play_game(TennisGame7, p1_points, p2_points, p1_name, p2_name)
             with self.subTest(f"{TennisGame7.__name__} - {testcase}"):
                 self.assertEqual(

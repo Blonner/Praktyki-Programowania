@@ -21,9 +21,12 @@ class TennisGame1:
         # 3 koniec gry
         if self.p1_points >= 4 or self.p2_points >= 4:
             diff = self.p1_points - self.p2_points
-            if diff == 1: return f"Advantage {self.p1_name}"
-            if diff == -1: return f"Advantage {self.p2_name}"
-            if diff >= 2: return f"Win for {self.p1_name}"
+            if diff == 1:
+                return f"Advantage {self.p1_name}"
+            if diff == -1:
+                return f"Advantage {self.p2_name}"
+            if diff >= 2:
+                return f"Win for {self.p1_name}"
             return f"Win for {self.p2_name}"
 
         # 4  wyniki
@@ -31,6 +34,7 @@ class TennisGame1:
         s1 = names[self.p1_points]
         s2 = names[self.p2_points]
         return s1 + "-" + s2
+
 
 # POPRAWKI:
 # 1 Naprawiono bledne przypisywanie punktow dla graczy na podstawie nazw.
