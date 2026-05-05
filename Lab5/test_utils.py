@@ -33,3 +33,21 @@ def test_multiply(a, b, expected):
 def test_divide(a, b, expected):
     result = utils.divide(a, b)
     assert result == expected
+
+
+@pytest.mark.parametrize("n, expected", [(0, "0"), (10, "1010"), (100, "1100100")])
+def test_to_binary_valid(n, expected):
+    """Test poprawnej konwersji."""
+    assert utils.to_binary(n) == expected
+
+
+def test_to_binary_range_error():
+    """Test bledu zakresu."""
+    with pytest.raises(ValueError):
+        utils.to_binary(101)
+
+
+def test_to_binary_type_error():
+    """Test bledu typu."""
+    with pytest.raises(TypeError):
+        utils.to_binary(10.5)
