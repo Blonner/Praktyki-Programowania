@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  # Nasza aplikacja webowa
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+      - /app/__pycache__
+    depends_on:
+      - redis
+    environment:
+      - FLASK_APP=app.py
+
+  # Kontener bazy danych Redis
+  redis:
+    image: "redis:alpine"
